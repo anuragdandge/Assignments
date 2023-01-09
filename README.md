@@ -1,7 +1,7 @@
 # Assignments
 | Sr. No. | Name                                                      | Link                                                                       |
 | ------- | --------------------------------------------------------- | -------------------------------------------------------------------------- |
-| 1       |   Define a class Animal with their basic features as class members.Create two derived classes from Animal named herbivores and Carnivores(type) with their own features too.Accept name of animal with type and display all the related information.                                                        | [Algorithm 1](anuragdandge-mcoe/Assignments/Assignment1.cpp)                                                            |
+| 1       |   Define a class Animal with their basic features as class members.Create two derived classes from Animal named herbivores and Carnivores(type) with their own features too.Accept name of animal with type and display all the related information.                                                        | [Algorithm 1](/Assignment1.cpp)                                                            |
 | 2       |                                                           | [Algorithm 2]()                      |
 | 3       |                                                           | [Algorithm 3](/FY/DSA/Linked%20List/addInBetween.md)                       |
 | 4       |                                                           | [Algorithm 4](/FY/DSA/Linked%20List/addAtEnd.md)                           |
