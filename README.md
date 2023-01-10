@@ -9,5 +9,5 @@
 | 6       |  Assume that the company markets books and audio tapes prepare class Publication{}; having members " title & price " from Publications{}; class derive two classes a Class Book{}; which adds page count , A Class Tape{}; that adds playing time in minutes further add base Class that holds sales from both books & Tape WAP in C++ that displays All Books having page count greater than 100 and All cassatt that play for more than 60 minutes  | [Code 6](Assignment6.cpp)            |
 | 7       |              | [Code 7](/)             |
 | 8       | Create a class FLOAT that contains one float data member. Overload all the four arithmetic operators so that they operate on the objects of FLOAT. | [Code 8](/Assignment8.cpp)                 |
-| 9       |                                        | [Code 9](/)                        |
+| 9       |Create a class MAT of size m*n. Define all possible matrix operations for MAT type objects. | [Code 9](/Assignment9.cpp)                        |
 | 10      |       Write a C++ program to concatenate two Strings using operator + function.       | [Code 10](/Assignment10.cpp)                                    |
