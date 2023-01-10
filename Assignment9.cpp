@@ -15,19 +15,11 @@ public:
                 cin >> a[i][j];
             }
         }
-        // cout << "Enter Elements for 2st Matrix :";
-        // for (int i = 0; i < 3; i++)
-        // {
-        //     for (int j = 0; j < 3; j++)
-        //     {
-        //         cin >> b[i][j];
-        //     }
-        // }
+       
     }
     void dispMat()
     {
-        // cout << " Elements of  Matrix :\n";
-        // cout << " Matrix 1 \t Matrix 2 :\n";
+      
         for (int i = 0; i < 3; i++)
         {
             for (int j = 0; j < 3; j++)
