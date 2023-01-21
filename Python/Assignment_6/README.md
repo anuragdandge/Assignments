@@ -11,7 +11,7 @@
 |8| Write a Python Program to Make a Simple Calculator | [Pgm 8](/Python/Assignment_6/6_8.py) |
 |9| Write a Python Program to Shuffle Deck of Cards | [Pgm 9](/Python/Assignment_6/6_9.py) |
 |10| Write a Python Program to Display Calendar | [Pgm 10](/Python/Assignment_6/6_10.py) |
-|11|  | [Pgm 11](/Python/Assignment_6/6_11.py) |
-|12| | [Pgm 12](/Python/Assignment_6/6_12.py) |
-|13| | [Pgm 13](/Python/Assignment_6/6_13.py) |
-|14| | [Pgm 14](/Python/Assignment_6/6_14.py) |
+|11| Write a Python Program to Display Fibonacci Sequence Using Recursion | [Pgm 11](/Python/Assignment_6/6_11.py) |
+|12| Write a Python Program to Find Sum of Natural Numbers Using Recursion | [Pgm 12](/Python/Assignment_6/6_12.py) |
+|13| Write a Python Program to Find Factorial of Number Using Recursion | [Pgm 13](/Python/Assignment_6/6_13.py) |
+|14| Write a Python Program to Convert Decimal to Binary Using Recursion | [Pgm 14](/Python/Assignment_6/6_14.py) |
