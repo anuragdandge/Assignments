@@ -1,10 +1,7 @@
-# Write a Python program to convert a tuple to a string.
+# Write a Python Program to Convert Decimal to Binary, Octal and Hexadecimal
 
-tup = ('a','n','u','r','a','g')
-# declare an empty string
-str = ''
-# Loop to iterate over the tuple to add each element to the string
-for i in tup:
-     str = str + i
+num = int(input("Enter A Number "))
 
-print(str)
+print(num," to Binary = ",bin(num))
+print(num," to Octal = ",oct(num))
+print(num," to Hexadecimal = ",hex(num))

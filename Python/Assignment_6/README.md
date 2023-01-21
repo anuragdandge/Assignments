@@ -2,11 +2,11 @@
 | No.|Program Name|Link|
 |-|-|-|
 |1| Write a Python Program to Display Powers of 2 Using Anonymous Function | [Pgm 1](/Python/Assignment_6/6_1.py) |
-|2|  | [Pgm 2](/Python/Assignment_6/6_2.py) |
-|3|  | [Pgm 3](/Python/Assignment_6/6_3.py) |
-|4|  | [Pgm 4](/Python/Assignment_6/6_4.py) |
-|5|  | [Pgm 5](/Python/Assignment_6/6_5.py) |
-|6|  | [Pgm 6](/Python/Assignment_6/6_6.py) |
+|2| Write a Python Program to Find Numbers Divisible by Another Number | [Pgm 2](/Python/Assignment_6/6_2.py) |
+|3| Write a Python Program to Convert Decimal to Binary, Octal and Hexadecimal | [Pgm 3](/Python/Assignment_6/6_3.py) |
+|4| Write a Python Program to Find ASCII Value of Character | [Pgm 4](/Python/Assignment_6/6_4.py) |
+|5| Write a Python Program to Find HCF or GCD | [Pgm 5](/Python/Assignment_6/6_5.py) |
+|6| Write a Python Program to Find LCM | [Pgm 6](/Python/Assignment_6/6_6.py) |
 |7|  | [Pgm 7](/Python/Assignment_6/6_7.py) |
 |8|  | [Pgm 8](/Python/Assignment_6/6_8.py) |
 |9|  | [Pgm 9](/Python/Assignment_6/6_9.py) |

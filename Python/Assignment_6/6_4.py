@@ -1,14 +1,8 @@
-# Write a Python program to find the repeated items of a tuple.
+# Write a Python Program to Find ASCII Value of Character
 
-tup  = ('a','a','b','c')
-list = []
-rep=0
-for i in tup:
-    if tup.count(i) > 1 :
-        rep = i
-        list.append(i)
-co = len(list)
-print(rep,"is repeated ",co," times")
+# "ord()" function returns an integer representing the Unicode code point of the given character,
+#  which is the ASCII value of the character.
 
+char = input("Enter Any Character ")
 
-
+print("ASCII Value of ", char, " is ", ord(char))
