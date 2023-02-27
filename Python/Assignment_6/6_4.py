@@ -4,5 +4,4 @@
 #  which is the ASCII value of the character.
 
 char = input("Enter Any Character ")
-
 print("ASCII Value of ", char, " is ", ord(char))

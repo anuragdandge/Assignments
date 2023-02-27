@@ -1,0 +1,42 @@
+Q1 )
+ Program : 
+ Output :
+Q2 )
+ Program : 
+ Output :
+Q3 )
+ Program : 
+ Output :
+Q4 )
+ Program : 
+ Output :
+Q5 )
+ Program : 
+ Output :
+Q6 )
+ Program : 
+ Output :
+Q7 )
+ Program : 
+ Output :
+Q8 )
+ Program : 
+ Output :
+Q9 )
+ Program : 
+ Output :
+Q10 )
+ Program : 
+ Output :
+Q11 )
+ Program : 
+ Output :
+Q12 )
+ Program : 
+ Output :
+Q13 )
+ Program : 
+ Output :
+Q14 )
+ Program : 
+ Output :
