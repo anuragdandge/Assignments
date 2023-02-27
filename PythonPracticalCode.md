@@ -1,8 +1,6 @@
 
 #  Important Programs :-
 
-|-|-|
-|
 ###  `1` Program to Map two list into dictionary
 ```python
 def map_list_to_dict(list1, list2):
