@@ -1,0 +1,6 @@
+1. Write a C++ program for Exception Handling Divide by zero Using C++ Programming
+2. Write a C++ program to sort an array in ascending order using function template.
+3. Write a C++ program to swap a data using function template.
+4. Write a C++ program to make a simple calculator using class template.
+5. Write a C++ program implementing stack and it’s operations using template class.
+6. Write a C++ program implementing linked list &amp;amp; some required operations on it using class template
