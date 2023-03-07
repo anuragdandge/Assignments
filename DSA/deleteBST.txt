@@ -1,0 +1,24 @@
+Delete(TREE,ITEM)
+if ITEM > TREE->DATA
+
+Node *parent = NULL ; 
+Node*cur = root ; 
+ search (cur , item , parent )
+
+if ( cur == NULL ){
+    return ; 
+}
+if ( cur-> left == NULL && cur-> right == NULL ){
+    if (cur != root ) { 
+      if ( parent - > left == cur ) { 
+            parent - > left = NULL ;
+         }else{
+         parent -> right = NULL ;
+         }
+       }
+    else { 
+    root = NULL;
+    }
+    free (cur);
+}
+else if 

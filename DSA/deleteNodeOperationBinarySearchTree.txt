@@ -1,0 +1,26 @@
+
+TreeNode *deleteNode(TreeNode *r,int v ){
+    1. if r -- NULL THEN ->                                // Base Condition 
+       1.1 return r;
+    2. else if v < r->value then ->                        // if value smaller then go left sub tree 
+       2.1 r->left = deleteNode(r->left , v);
+    3. else if v > ->value then ->                         // if value larger then go left sub tree 
+       3.1 r->right = deleteNode(r->right , v);
+    4. else 
+        4.1 if r->left == NULL then -> // Node with only right child 
+            4.1.1 temp = r->right           // OR no Child 
+            4.1.2 delete r
+            4.1.3 return temp
+        4.2 else if r->right == NULL then ->  // Node with only left child
+            4.2.1 temp = r->left 
+            4.2.2 delete r;
+            4.2.2 return temp;
+        4.3 else // node with two children
+            4.3.1 temp = minValueNode->right
+            4.3.2 r->value = temp->value
+            4.3.3 r->right = deleteNode(r->right , temp->value)
+    5 return r
+
+
+
+}
