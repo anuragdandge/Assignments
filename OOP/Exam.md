@@ -523,3 +523,77 @@ Note that in all three cases, the function signature of the overloaded binary op
 
 # UNIT 5 
 
+### Q . Explain the Concept of Inheritance along with it's Types 
+
+Inheritance is a fundamental concept of object-oriented programming that allows a new class to be based on an existing class. The new class, called the derived class, inherits properties and behaviors from the existing class, called the base class. The derived class can add new properties and behaviors or modify the ones inherited from the base class.
+
+There are mainly four types of inheritance in C++:
+
+1. `Single Inheritance` : In single inheritance, a derived class is derived from a single base class. The derived class inherits all the properties and behaviors of the base class.
+```cpp
+class Base {
+public:
+    void baseFunction();
+};
+
+class Derived : public Base {
+public:
+    void derivedFunction();
+};
+```
+2. `Multiple Inheritance`: In multiple inheritance, a derived class is derived from more than one base class. The derived class inherits all the properties and behaviors of both the base classes.
+```cpp
+class Base1 {
+public:
+    void base1Function();
+};
+
+class Base2 {
+public:
+    void base2Function();
+};
+
+class Derived : public Base1, public Base2 {
+public:
+    void derivedFunction();
+};
+```
+3. `Hierarchical Inheritance`: In hierarchical inheritance, a derived class is derived from a single base class, but multiple derived classes are derived from the same base class.
+```cpp
+class Base {
+public:
+    void baseFunction();
+};
+
+class Derived1 : public Base {
+public:
+    void derived1Function();
+};
+
+class Derived2 : public Base {
+public:
+    void derived2Function();
+};
+```
+4. `Multilevel Inheritance`: In multilevel inheritance, a derived class is derived from another derived class, which in turn is derived from a base class.
+```cpp
+class Base {
+public:
+    void baseFunction();
+};
+
+class Derived1 : public Base {
+public:
+    void derived1Function();
+};
+
+class Derived2 : public Derived1 {
+public:
+    void derived2Function();
+};
+```
+Inheritance allows for code reuse and the creation of hierarchies of related classes, making the code more organized, modular, and easier to maintain. However, it should be used judiciously to avoid creating complex inheritance hierarchies that may be difficult to understand and maintain.
+
+
+
+ 
