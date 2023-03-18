@@ -299,4 +299,39 @@ Static data members and static member functions are useful in situations where w
 It's worth noting that static data members and static member functions can only access other static members of the class, since they do not have access to the state of any particular instance.
 
 
+## Q . What are constructor and destructor explain with example 
+
+
+In C++, a constructor is a special member function that is called when an object of a class is created, and is used to initialize the object's data members. A destructor is another special member function that is called when an object is destroyed, and is used to clean up any resources that the object acquired during its lifetime.
+
+Here's an example of a class with a constructor and a destructor:
+
+```cpp
+class MyClass {
+  public:
+    int x;
+    MyClass() { // constructor
+        x = 0;
+        std::cout << "Constructor called" << std::endl;
+    }
+    ~MyClass() { // destructor
+        std::cout << "Destructor called" << std::endl;
+    }
+};
+
+int main() {
+    MyClass obj; // create an object of MyClass
+    std::cout << "Object created" << std::endl;
+    return 0;
+}
+```
+In this example, we define a class `MyClass` with a constructor that initializes the data member `x` to 0 and prints a message to the console, and a destructor that prints another message to the console.
+
+We then create an object `obj` of `MyClass` in the main function. When `obj` is created, the constructor of `MyClass` is called and initializes `x` to 0 and prints a message to the console. When `obj` is destroyed, the destructor of `MyClass` is called and prints another message to the console.
+
+Constructors and destructors are used to ensure that objects are always initialized and cleaned up properly, respectively. Constructors can also be used to perform any additional initialization that may be required, such as allocating memory or opening files. Similarly, destructors can be used to perform any cleanup that may be required, such as releasing memory or closing files.
+
+It's worth noting that if a class does not have a constructor or a destructor defined explicitly, C++ provides a default constructor and a default destructor. The default constructor initializes all data members to their default values, while the default destructor does nothing. However, if a class acquires any resources during its lifetime, such as memory or file handles, it's important to define a destructor to ensure that those resources are properly released when the object is destroyed.
+
+
 ## 
