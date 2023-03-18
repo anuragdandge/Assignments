@@ -154,8 +154,6 @@ Using reference variables can be useful in a variety of situations, such as pass
 
 
 
-
--------------
 ### Q . What is Function Overloading ? What is difference between function overloading and Default Argument
 Function overloading is a feature in C++ that allows a function to have multiple definitions with the same name but different parameters. In function overloading, the compiler selects the appropriate function to call based on the number, types, and order of the arguments passed to the function.
 
