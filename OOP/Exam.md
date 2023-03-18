@@ -1,4 +1,4 @@
--------------#
+# UNIT 1 
 ## Q. What is Object Oriented Programming. Compare Object Oriented and Procedure Oriented Programming
 
 Object-oriented programming (OOP) is a programming paradigm that focuses on the use of objects, which are instances of classes, to represent real-world entities or concepts. OOP involves the use of encapsulation, inheritance, and polymorphism to organize and structure code.
@@ -18,7 +18,7 @@ Here are some key differences between OOP and POP:
 Overall, OOP is generally considered to be more flexible, modular, and easier to maintain than POP. It allows for better code reuse and supports more complex and scalable applications. However, POP can be simpler and more efficient for small-scale applications.
 
 -------------#
-## Q . Explain the Concept of Classes, objects and message passing with suitable example
+### Q . Explain the Concept of Classes, objects and message passing with suitable example
 Classes, objects, and message passing are fundamental concepts in object-oriented programming (OOP).
 
 A class is a blueprint or template for creating objects that share similar properties and behavior. It defines the attributes and methods that an object will have. For example, a class called "Car" might have attributes such as "color," "model," and "year," and methods such as "start," "stop," and "accelerate."
@@ -94,7 +94,7 @@ Overall, C and C++ have several similarities but also some key differences. C is
 
 
 -------------
-## Q . Compare C & C++ 
+### Q . Compare C & C++ 
 C and C++ are two popular programming languages with many similarities and some important differences. Here are some key differences between C and C++:
 
 `Paradigm`: C is a procedural programming language, while C++ is an object-oriented programming language. C++ also supports procedural programming.
@@ -116,9 +116,9 @@ Overall, C and C++ are both powerful and flexible programming languages, but C++
 
 
 
-
--------------
-## Q . Explain the Concept of reference variable along with example 
+---
+# UNIT 2 
+### Q . Explain the Concept of reference variable along with example 
 In C++, a reference is a type of variable that refers to another variable. A reference variable is essentially an alias for another variable, meaning that any changes made to the reference variable are reflected in the original variable it refers to. Here is an example to illustrate the concept of reference variable:
 
 ```cpp
@@ -155,7 +155,7 @@ Using reference variables can be useful in a variety of situations, such as pass
 
 
 -------------
-## Q . What is Function Overloading ? What is difference between function overloading and Default Argument
+### Q . What is Function Overloading ? What is difference between function overloading and Default Argument
 Function overloading is a feature in C++ that allows a function to have multiple definitions with the same name but different parameters. In function overloading, the compiler selects the appropriate function to call based on the number, types, and order of the arguments passed to the function.
 
 For example, consider the following functions:
@@ -217,7 +217,7 @@ Note that whether or not a function is actually inlined is up to the compiler, w
 
 
 -------------
-## Q . Compare cout and cin over `printf()` and `scanf()`
+### Q . Compare cout and cin over `printf()` and `scanf()`
 `cout` and `cin` are C++ I/O stream objects that provide a convenient and type-safe way to perform input and output operations, while `printf()` and `scanf()` are C library functions that provide similar functionality in C.
 
 Here are some differences between `cout` and `cin` and `printf()` and `scanf()`:
@@ -239,7 +239,7 @@ In general, cout and cin are preferred in C++ due to their type safety, object-o
 
 
 -------------
-## Q . Explain Dynamic  memory allocation using NEW and DELETE with example and compare with malloc and free function in 'C' 
+### Q . Explain Dynamic  memory allocation using NEW and DELETE with example and compare with malloc and free function in 'C' 
 In C++, dynamic memory allocation is done using the new and delete operators, which are similar to the `malloc()` and `free()` functions in C. However, there are some differences in their usage and behavior.
 
 Here's an example of dynamic memory allocation using new and delete:
@@ -274,7 +274,9 @@ Finally, it's worth noting that in C++ it's generally preferred to use `new/dele
 
 
 -------------
-## Q . Explain static data member and static member function 
+
+# UNIT 3 
+### Q . Explain static data member and static member function 
 In C++, a static data member is a class member that is shared by all instances of the class, rather than being unique to each instance. A static member function is a class member function that can be called without an instance of the class.
 
 Here's an example of a class with a static data member and a static member function:
@@ -309,7 +311,7 @@ It's worth noting that static data members and static member functions can only 
 
 
 -------------
-## Q . What are constructor and destructor explain with example 
+### Q . What are constructor and destructor explain with example 
 
 
 In C++, a constructor is a special member function that is called when an object of a class is created, and is used to initialize the object's data members. A destructor is another special member function that is called when an object is destroyed, and is used to clean up any resources that the object acquired during its lifetime.
@@ -344,7 +346,7 @@ Constructors and destructors are used to ensure that objects are always initiali
 It's worth noting that if a class does not have a constructor or a destructor defined explicitly, C++ provides a default constructor and a default destructor. The default constructor initializes all data members to their default values, while the default destructor does nothing. However, if a class acquires any resources during its lifetime, such as memory or file handles, it's important to define a destructor to ensure that those resources are properly released when the object is destroyed.
 
 -------------
-## Q . Explain Friend Function with example
+### Q . Explain Friend Function with example
 In C++, a friend function is a function that is not a member of a class, but has access to the private and protected members of the class. A friend function can be declared inside the class definition using the friend keyword, or outside the class definition with the friend keyword and the class name.
 
 Here's an example of a class with a friend function:
@@ -381,7 +383,8 @@ Friend functions are often used to allow functions that are not members of a cla
 
 ---
 
-## Q .  What is Operator Overloading List the operator that cannot be overloaded as member function
+# UNIT 4 
+### Q .  What is Operator Overloading List the operator that cannot be overloaded as member function
 
 In C++, operator overloading is a feature that allows operators such as `+, -, *, /, <<, >>,` and many others to be redefined for a user-defined class or data type. This allows for a more natural and intuitive syntax when working with user-defined types.
 
@@ -420,7 +423,7 @@ These operators must be overloaded as non-member functions.'
 
 ---
 
-## Q . What are rules for operator overloading ? Explain the need of operator overloading
+### Q . What are rules for operator overloading ? Explain the need of operator overloading
 
 Rules for operator overloading in C++:
 
@@ -461,7 +464,7 @@ Operator overloading can also be used to define comparison operators, stream ins
 
 ---
 
-## Q . Explain Different ways of binary overloading
+### Q . Explain Different ways of binary overloading
 
 
 Binary operator overloading in C++ allows programmers to define new behaviors for built-in binary operators such as `+` , `-` , `*` , `/`, `==` , `!=` , `<` , `<=` , `>` , and `>=` for user-defined types. There are three different ways to overload binary operators in C++:
@@ -515,4 +518,8 @@ Point operator+(const Point& lhs, const Point& rhs) {
 In this example, the `+` operator is overloaded using a normal function, which takes constant references to two `Point` objects as parameters, and returns a new `Point` object whose coordinates are the sums of the corresponding coordinates of the two points.
 
 Note that in all three cases, the function signature of the overloaded binary operator must match the syntax of the operator being overloaded.
+
+---
+
+# UNIT 5 
 
