@@ -17,7 +17,7 @@ Here are some key differences between OOP and POP:
 
 Overall, OOP is generally considered to be more flexible, modular, and easier to maintain than POP. It allows for better code reuse and supports more complex and scalable applications. However, POP can be simpler and more efficient for small-scale applications.
 
--------------#
+------------
 ### Q . Explain the Concept of Classes, objects and message passing with suitable example
 Classes, objects, and message passing are fundamental concepts in object-oriented programming (OOP).
 
@@ -40,7 +40,7 @@ When the time for the meeting arrives, we can send a message to the "Sales Meeti
 In this way, objects can work together to accomplish tasks by sending messages to each other and invoking methods. This enables a more natural and intuitive way of programming by modeling real-world objects and their interactions.
 
 
--------------#
+-----------
 ## Q. Explain the Benefits and applications of OOP in cpp 
 Object-oriented programming (OOP) has several benefits in C++, including:
 
