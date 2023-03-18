@@ -469,9 +469,7 @@ Operator overloading can also be used to define comparison operators, stream ins
 
 Binary operator overloading in C++ allows programmers to define new behaviors for built-in binary operators such as `+` , `-` , `*` , `/`, `==` , `!=` , `<` , `<=` , `>` , and `>=` for user-defined types. There are three different ways to overload binary operators in C++:
 
-1. Overloading binary operators as member functions:
-
-Binary operators can be overloaded as member functions of a class, which means that the left-hand operand of the operator is an instance of the class. This approach is suitable when the operator needs to access the private data members of the class. For example:
+1. Overloading binary operators as member functions: Binary operators can be overloaded as member functions of a class, which means that the left-hand operand of the operator is an instance of the class. This approach is suitable when the operator needs to access the private data members of the class. For example:
 
 ```cpp
 class Vector {
@@ -485,9 +483,7 @@ private:
 ```
 In this example, the `+` operator is overloaded as a member function of the `Vector` class. The function takes a constant reference to another `Vector` object as a parameter, and returns a new `Vector` object whose `x` and `y` components are the sum of the corresponding components of the two vectors.
 
-2. Overloading binary operators as friend functions:
-
-Binary operators can also be overloaded as friend functions of a class, which means that the left-hand operand of the operator is not an instance of the class, but the function has access to the private data members of the class. This approach is suitable when the operator needs to access private data members of both operands. For example:
+2. Overloading binary operators as friend functions: Binary operators can also be overloaded as friend functions of a class, which means that the left-hand operand of the operator is not an instance of the class, but the function has access to the private data members of the class. This approach is suitable when the operator needs to access private data members of both operands. For example:
 
 ```cpp
 class Matrix {
@@ -502,9 +498,7 @@ private:
 
 In this example, the `+` operator is overloaded as a friend function of the Matrix class. The function takes constant references to two Matrix objects as parameters, and returns a new Matrix object whose elements are the sums of the corresponding elements of the two matrices.
 
-3. Overloading binary operators using normal functions:
-
-Binary operators can also be overloaded using normal functions, which take two arguments, one for each operand. This approach is suitable when the operator does not need to access private data members of either operand. For example:
+3. Overloading binary operators using normal functions: Binary operators can also be overloaded using normal functions, which take two arguments, one for each operand. This approach is suitable when the operator does not need to access private data members of either operand. For example:
 
 ```cpp
 class Point {
@@ -595,5 +589,160 @@ public:
 Inheritance allows for code reuse and the creation of hierarchies of related classes, making the code more organized, modular, and easier to maintain. However, it should be used judiciously to avoid creating complex inheritance hierarchies that may be difficult to understand and maintain.
 
 
+### Q . Explain the concept of Polymorphism along with it's Types
 
- 
+Polymorphism is the ability of objects of different types to be used interchangeably. It allows a program to have a single interface for multiple related objects. In C++, polymorphism is achieved through virtual functions and function overloading. There are two types of polymorphism in C++:
+
+- `Compile-time Polymorphism` : Compile-time polymorphism is also known as static polymorphism. It is achieved through function overloading and operator overloading. In function overloading, multiple functions can have the same name but different parameters. The correct function to be called is determined at compile-time based on the arguments passed to the function.
+```cpp
+void add(int a, int b);
+void add(float a, float b, float c);
+```
+In operator overloading, operators such as `+` , `-`, `*`, `/`, etc., can be overloaded to work with user-defined objects. The behavior of the operator depends on the type of operands.
+
+```cpp
+class Vector {
+public:
+    Vector operator+(const Vector& other);
+};
+```
+- `Runtime Polymorphism`: Runtime polymorphism is also known as dynamic polymorphism. It is achieved through virtual functions and inheritance. A virtual function is a member function that is declared in the base class and overridden in the derived class. The function to be called is determined at runtime based on the type of object pointed to by the base class pointer.
+```cpp
+class Shape {
+public:
+    virtual void draw();
+};
+
+class Circle : public Shape {
+public:
+    void draw();
+};
+
+class Square : public Shape {
+public:
+    void draw();
+};
+
+int main() {
+    Shape* shape1 = new Circle();
+    Shape* shape2 = new Square();
+    shape1->draw(); // calls draw() of Circle
+    shape2->draw(); // calls draw() of Square
+}
+```
+Polymorphism allows for code reuse and makes the code more flexible and extensible. It also enables the creation of generic algorithms and data structures that can work with objects of different types.
+
+
+### Q . Explain the concept of Virtual Functions with an example 
+
+In C++, a virtual function is a member function that is declared in the base class and overridden in the derived class. When a virtual function is called through a base class pointer or reference, the function to be called is determined at runtime based on the type of object pointed to by the pointer or reference.
+
+Here's an example to illustrate the concept of virtual functions:
+
+```cpp
+#include <iostream>
+
+class Shape {
+public:
+    virtual void draw() {
+        std::cout << "Drawing a shape\n";
+    }
+};
+
+class Circle : public Shape {
+public:
+    void draw() override {
+        std::cout << "Drawing a circle\n";
+    }
+};
+
+class Square : public Shape {
+public:
+    void draw() override {
+        std::cout << "Drawing a square\n";
+    }
+};
+
+int main() {
+    Shape* shape1 = new Circle();
+    Shape* shape2 = new Square();
+    shape1->draw(); // calls draw() of Circle
+    shape2->draw(); // calls draw() of Square
+    delete shape1;
+    delete shape2;
+    return 0;
+}
+```
+In this example, we have a base class `Shape` and two derived classes `Circle` and `Square`. The `Shape` class has a virtual function `draw()`, which is overridden in the derived classes. We create two pointers `shape1` and `shape2` of type `Shape*`, which are initialized with objects of type `Circle` and `Square`, respectively. When the `draw()` function is called through the base class pointers, the function to be called is determined at runtime based on the type of object pointed to by the pointers. In this case, the `draw()` function of the derived classes `Circle` and `Square` is called.
+
+The output of the program is:
+
+```cpp
+Drawing a circle
+Drawing a square
+```
+
+Without the virtual keyword, the `draw()` function of the `Shape` class would have been called instead of the derived classes. With the virtual keyword, the correct function is called based on the type of object pointed to by the pointer.
+
+
+### Q . Explain the concept of friend class with exmpale 
+
+In C++, a friend class is a class that has access to the private and protected members of another class. It can access private and protected members of the other class as if they were its own members. The friend relationship is established by declaring the class that needs access as a friend in the class that grants access.
+
+Here's an example to illustrate the concept of friend class:
+
+```cpp
+#include <iostream>
+
+class Shape {
+private:
+    int length;
+    int width;
+public:
+    Shape(int l, int w) {
+        length = l;
+        width = w;
+    }
+    friend class Rectangle;
+};
+
+class Rectangle {
+public:
+    int area(Shape s) {
+        return s.length * s.width;
+    }
+};
+
+int main() {
+    Shape shape(5, 10);
+    Rectangle rectangle;
+    std::cout << "Area of the rectangle: " << rectangle.area(shape) << std::endl;
+    return 0;
+}
+```
+In this example, we have two classes `Shape` and `Rectangle`. The `Shape` class has two private members `length` and `width`, and a constructor that initializes them. The `Rectangle` class has a public member function `area()` that calculates the area of a rectangle, which is defined as the product of its `length` and `width`.
+
+The `Rectangle` class is declared as a friend of the `Shape` class, which means it has access to the private members of the `Shape` class. The `area()` function takes an object of the `Shape` class as a parameter and uses its `length` and `width` members to calculate the area of a rectangle.
+
+In the main() function, we create an object `shape` of the `Shape` class with `length` 5 and `width` 10, and an object rectangle of the `Rectangle` class. We then call the `area()` function of the rectangle object with the `shape` object as a parameter, which returns the area of the rectangle. Since the `Rectangle` class is a friend of the `Shape` class, it can access its private members and calculate the area correctly.
+
+The output of the program is:
+
+```cpp
+Area of the rectangle: 50
+```
+
+Note that using friend classes can sometimes break encapsulation, so it should be used judiciously.
+
+
+---
+# UNIT 6 
+
+### Q . What are Stream Classes? Explain any two input and output functions with example 
+
+
+
+
+
+
+
