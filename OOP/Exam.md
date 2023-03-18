@@ -90,7 +90,7 @@ Here's a comparison of C and C++ in a tabular format:
 Overall, C and C++ have several similarities but also some key differences. C is a procedural language that is fast and efficient but lacks many of the advanced features of C++. C++ is an object-oriented language that supports features such as inheritance, polymorphism, templates, and exception handling, and has a more extensive standard library. While C is often used for low-level programming and system development, C++ is used for a wider range of applications, including game development, web applications, scientific simulations, and more.
 
 
-#### Q . Compare C & C++ 
+## Q . Compare C & C++ 
 C and C++ are two popular programming languages with many similarities and some important differences. Here are some key differences between C and C++:
 
 `Paradigm`: C is a procedural programming language, while C++ is an object-oriented programming language. C++ also supports procedural programming.
@@ -113,7 +113,7 @@ Overall, C and C++ are both powerful and flexible programming languages, but C++
 
 
 
-#### Q . Explain the Concept of reference variable along with example 
+## Q . Explain the Concept of reference variable along with example 
 In C++, a reference is a type of variable that refers to another variable. A reference variable is essentially an alias for another variable, meaning that any changes made to the reference variable are reflected in the original variable it refers to. Here is an example to illustrate the concept of reference variable:
 
 ```cpp
@@ -149,7 +149,7 @@ Using reference variables can be useful in a variety of situations, such as pass
 
 
 
-#### Q . What is Function Overloading ? What is difference between function overloading and Default Argument
+## Q . What is Function Overloading ? What is difference between function overloading and Default Argument
 Function overloading is a feature in C++ that allows a function to have multiple definitions with the same name but different parameters. In function overloading, the compiler selects the appropriate function to call based on the number, types, and order of the arguments passed to the function.
 
 For example, consider the following functions:
@@ -210,7 +210,7 @@ Note that whether or not a function is actually inlined is up to the compiler, w
 
 
 
-#### Q . Compare cout and cin over `printf()` and `scanf()`
+## Q . Compare cout and cin over `printf()` and `scanf()`
 `cout` and `cin` are C++ I/O stream objects that provide a convenient and type-safe way to perform input and output operations, while `printf()` and `scanf()` are C library functions that provide similar functionality in C.
 
 Here are some differences between `cout` and `cin` and `printf()` and `scanf()`:
@@ -231,7 +231,7 @@ In general, cout and cin are preferred in C++ due to their type safety, object-o
 
 
 
-#### Q . Explain Dynamic  memory allocation using NEW and DELETE with example and compare with malloc and free function in 'C' 
+## Q . Explain Dynamic  memory allocation using NEW and DELETE with example and compare with malloc and free function in 'C' 
 In C++, dynamic memory allocation is done using the new and delete operators, which are similar to the `malloc()` and `free()` functions in C. However, there are some differences in their usage and behavior.
 
 Here's an example of dynamic memory allocation using new and delete:
@@ -265,7 +265,7 @@ Another difference is that `new/delete` can be overloaded by user-defined types,
 Finally, it's worth noting that in C++ it's generally preferred to use `new/delete` over `malloc()/free()`, since `new/delete` are type-safe and offer better support for object-oriented programming features such as constructors and destructors. However, `malloc()/free()` are still commonly used in C code and in performance-critical applications where fine-grained control over memory allocation and deallocation is necessary.
 
 
-#### Q . Explain static data member and static member function 
+## Q . Explain static data member and static member function 
 In C++, a static data member is a class member that is shared by all instances of the class, rather than being unique to each instance. A static member function is a class member function that can be called without an instance of the class.
 
 Here's an example of a class with a static data member and a static member function:
@@ -299,4 +299,4 @@ Static data members and static member functions are useful in situations where w
 It's worth noting that static data members and static member functions can only access other static members of the class, since they do not have access to the state of any particular instance.
 
 
-#### 
+## 
