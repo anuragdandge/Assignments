@@ -1,4 +1,5 @@
-### Q. What is Object Oriented Programming. Compare Object Oriented and Procedure Oriented Programming
+-------------#
+## Q. What is Object Oriented Programming. Compare Object Oriented and Procedure Oriented Programming
 
 Object-oriented programming (OOP) is a programming paradigm that focuses on the use of objects, which are instances of classes, to represent real-world entities or concepts. OOP involves the use of encapsulation, inheritance, and polymorphism to organize and structure code.
 
@@ -16,7 +17,8 @@ Here are some key differences between OOP and POP:
 
 Overall, OOP is generally considered to be more flexible, modular, and easier to maintain than POP. It allows for better code reuse and supports more complex and scalable applications. However, POP can be simpler and more efficient for small-scale applications.
 
-### Q . Explain the Concept of Classes, objects and message passing with suitable example
+-------------#
+## Q . Explain the Concept of Classes, objects and message passing with suitable example
 Classes, objects, and message passing are fundamental concepts in object-oriented programming (OOP).
 
 A class is a blueprint or template for creating objects that share similar properties and behavior. It defines the attributes and methods that an object will have. For example, a class called "Car" might have attributes such as "color," "model," and "year," and methods such as "start," "stop," and "accelerate."
@@ -38,7 +40,8 @@ When the time for the meeting arrives, we can send a message to the "Sales Meeti
 In this way, objects can work together to accomplish tasks by sending messages to each other and invoking methods. This enables a more natural and intuitive way of programming by modeling real-world objects and their interactions.
 
 
-### Q. Explain the Benefits and applications of OOP in cpp 
+-------------#
+## Q. Explain the Benefits and applications of OOP in cpp 
 Object-oriented programming (OOP) has several benefits in C++, including:
 
 1. Modularity and maintainability: OOP allows code to be organized into modular, reusable units called classes. This makes it easier to maintain and modify code over time.
@@ -90,6 +93,7 @@ Here's a comparison of C and C++ in a tabular format:
 Overall, C and C++ have several similarities but also some key differences. C is a procedural language that is fast and efficient but lacks many of the advanced features of C++. C++ is an object-oriented language that supports features such as inheritance, polymorphism, templates, and exception handling, and has a more extensive standard library. While C is often used for low-level programming and system development, C++ is used for a wider range of applications, including game development, web applications, scientific simulations, and more.
 
 
+-------------
 ## Q . Compare C & C++ 
 C and C++ are two popular programming languages with many similarities and some important differences. Here are some key differences between C and C++:
 
@@ -113,6 +117,7 @@ Overall, C and C++ are both powerful and flexible programming languages, but C++
 
 
 
+-------------
 ## Q . Explain the Concept of reference variable along with example 
 In C++, a reference is a type of variable that refers to another variable. A reference variable is essentially an alias for another variable, meaning that any changes made to the reference variable are reflected in the original variable it refers to. Here is an example to illustrate the concept of reference variable:
 
@@ -149,6 +154,7 @@ Using reference variables can be useful in a variety of situations, such as pass
 
 
 
+-------------
 ## Q . What is Function Overloading ? What is difference between function overloading and Default Argument
 Function overloading is a feature in C++ that allows a function to have multiple definitions with the same name but different parameters. In function overloading, the compiler selects the appropriate function to call based on the number, types, and order of the arguments passed to the function.
 
@@ -210,6 +216,7 @@ Note that whether or not a function is actually inlined is up to the compiler, w
 
 
 
+-------------
 ## Q . Compare cout and cin over `printf()` and `scanf()`
 `cout` and `cin` are C++ I/O stream objects that provide a convenient and type-safe way to perform input and output operations, while `printf()` and `scanf()` are C library functions that provide similar functionality in C.
 
@@ -231,6 +238,7 @@ In general, cout and cin are preferred in C++ due to their type safety, object-o
 
 
 
+-------------
 ## Q . Explain Dynamic  memory allocation using NEW and DELETE with example and compare with malloc and free function in 'C' 
 In C++, dynamic memory allocation is done using the new and delete operators, which are similar to the `malloc()` and `free()` functions in C. However, there are some differences in their usage and behavior.
 
@@ -265,6 +273,7 @@ Another difference is that `new/delete` can be overloaded by user-defined types,
 Finally, it's worth noting that in C++ it's generally preferred to use `new/delete` over `malloc()/free()`, since `new/delete` are type-safe and offer better support for object-oriented programming features such as constructors and destructors. However, `malloc()/free()` are still commonly used in C code and in performance-critical applications where fine-grained control over memory allocation and deallocation is necessary.
 
 
+-------------
 ## Q . Explain static data member and static member function 
 In C++, a static data member is a class member that is shared by all instances of the class, rather than being unique to each instance. A static member function is a class member function that can be called without an instance of the class.
 
@@ -299,6 +308,7 @@ Static data members and static member functions are useful in situations where w
 It's worth noting that static data members and static member functions can only access other static members of the class, since they do not have access to the state of any particular instance.
 
 
+-------------
 ## Q . What are constructor and destructor explain with example 
 
 
@@ -333,5 +343,176 @@ Constructors and destructors are used to ensure that objects are always initiali
 
 It's worth noting that if a class does not have a constructor or a destructor defined explicitly, C++ provides a default constructor and a default destructor. The default constructor initializes all data members to their default values, while the default destructor does nothing. However, if a class acquires any resources during its lifetime, such as memory or file handles, it's important to define a destructor to ensure that those resources are properly released when the object is destroyed.
 
+-------------
+## Q . Explain Friend Function with example
+In C++, a friend function is a function that is not a member of a class, but has access to the private and protected members of the class. A friend function can be declared inside the class definition using the friend keyword, or outside the class definition with the friend keyword and the class name.
 
-## 
+Here's an example of a class with a friend function:
+
+```cpp
+class MyClass {
+  private:
+    int x;
+  public:
+    MyClass(int a) : x(a) {}
+    friend void printX(MyClass obj);
+};
+
+void printX(MyClass obj) {
+    std::cout << "The value of x is: " << obj.x << std::endl;
+}
+
+int main() {
+    MyClass obj(42);
+    printX(obj);
+    return 0;
+}
+```
+In this example, we define a class `MyClass` with a private data member `x` and a constructor that initializes `x` with an argument a. We then declare the `printX` function as a friend of `MyClass`.
+
+The `printX` function takes an object of `MyClass` as a parameter, and since it is declared as a friend of `MyClass`, it has access to the private data member `x`. In the main function, we create an object obj of `MyClass` with a value of 42, and then call the `printX` function to print the value of `x`.
+
+The output of this program is:
+
+```cpp
+The value of x is: 42
+```
+Friend functions are often used to allow functions that are not members of a class to access its private data. They can also be used to simplify the implementation of operators, as operators are often defined outside the class definition, but need access to its private data members. However, it's important to use friend functions sparingly, as they can break encapsulation and make it harder to maintain the code.
+
+---
+
+## Q .  What is Operator Overloading List the operator that cannot be overloaded as member function
+
+In C++, operator overloading is a feature that allows operators such as `+, -, *, /, <<, >>,` and many others to be redefined for a user-defined class or data type. This allows for a more natural and intuitive syntax when working with user-defined types.
+
+Operator overloading can be done in two ways: as a member function or as a non-member function. When overloading an operator as a member function, the left operand is the object on which the operator is applied, and the right operand is passed as a parameter to the function.
+
+Here is an example of overloading the `+` operator as a member function:
+
+```cpp
+class MyClass {
+  private:
+    int value;
+  public:
+    MyClass(int v) : value(v) {}
+    MyClass operator+(const MyClass& other) {
+        return MyClass(value + other.value);
+    }
+};
+
+int main() {
+    MyClass a(10);
+    MyClass b(20);
+    MyClass c = a + b;
+    return 0;
+}
+```
+In this example, we define a class `MyClass` with a private data member value and a constructor that initializes value with an argument v. We then overload the `+` operator as a member function that takes a constant reference to another `MyClass` object as a parameter. The function returns a new `MyClass` object whose value is the sum of the value of the two objects.
+
+We then create three `MyClass` objects and add the first two using the overloaded `+` operator as a member function. The result is assigned to the third `MyClass` object.
+
+While most operators can be overloaded as member functions or non-member functions, there are a few operators that cannot be overloaded as member functions. These include:
+
+- `::` (scope resolution operator)
+- `.*` (pointer-to-member operator)
+- `?:` (ternary operator)
+These operators must be overloaded as non-member functions.'
+
+---
+
+## Q . What are rules for operator overloading ? Explain the need of operator overloading
+
+Rules for operator overloading in C++:
+
+1. Overloaded operators must have at least one operand that is a user-defined type or a reference/pointer to a user-defined type.
+1. Overloaded operators must be defined using the operator keyword followed by the operator symbol.
+1. Overloaded operators cannot have default arguments.
+1. Overloaded operators cannot change the number of operands required by the operator.
+1. Overloaded operators cannot change the precedence or associativity of the operator.
+1. Overloaded operators must follow the same semantics as the built-in operators.
+
+The need for operator overloading in C++ arises from the fact that it allows programmers to define new meanings for the built-in operators for user-defined types. This can lead to more natural and intuitive syntax when working with user-defined types, and can make code easier to read and maintain.
+
+For example, consider a `Vector` class that represents a mathematical `vector` with two components `x` and `y`. We could overload the + operator to allow adding two `Vector` objects together:
+
+```cpp
+class Vector {
+  private:
+    double x, y;
+  public:
+    Vector(double a, double b) : x(a), y(b) {}
+    Vector operator+(const Vector& other) {
+        return Vector(x + other.x, y + other.y);
+    }
+};
+
+int main() {
+    Vector v1(1.0, 2.0);
+    Vector v2(3.0, 4.0);
+    Vector v3 = v1 + v2;
+    return 0;
+}
+```
+In this example, we overload the `+` operator as a member function of the Vector class. The function takes a constant reference to another Vector object as a parameter, and returns a new Vector object whose  `x` and `y` components are the sum of the corresponding components of the two vectors.
+
+Without operator overloading, we would have to write something like `Vector v3 = Vector(v1.getX() + v2.getX(), v1.getY() + v2.getY());` to achieve the same result, which is less natural and less readable.
+
+Operator overloading can also be used to define comparison operators, stream insertion/extraction operators, subscript operators, and many other operators.
+
+---
+
+## Q . Explain Different ways of binary overloading
+
+
+Binary operator overloading in C++ allows programmers to define new behaviors for built-in binary operators such as `+` , `-` , `*` , `/`, `==` , `!=` , `<` , `<=` , `>` , and `>=` for user-defined types. There are three different ways to overload binary operators in C++:
+
+1. Overloading binary operators as member functions:
+
+Binary operators can be overloaded as member functions of a class, which means that the left-hand operand of the operator is an instance of the class. This approach is suitable when the operator needs to access the private data members of the class. For example:
+
+```cpp
+class Vector {
+public:
+    Vector operator+(const Vector& rhs) const {
+        return Vector(x + rhs.x, y + rhs.y);
+    }
+private:
+    double x, y;
+};
+```
+In this example, the `+` operator is overloaded as a member function of the `Vector` class. The function takes a constant reference to another `Vector` object as a parameter, and returns a new `Vector` object whose `x` and `y` components are the sum of the corresponding components of the two vectors.
+
+2. Overloading binary operators as friend functions:
+
+Binary operators can also be overloaded as friend functions of a class, which means that the left-hand operand of the operator is not an instance of the class, but the function has access to the private data members of the class. This approach is suitable when the operator needs to access private data members of both operands. For example:
+
+```cpp
+class Matrix {
+public:
+    friend Matrix operator+(const Matrix& lhs, const Matrix& rhs) {
+        return Matrix(lhs.a + rhs.a, lhs.b + rhs.b, lhs.c + rhs.c, lhs.d + rhs.d);
+    }
+private:
+    int a, b, c, d;
+};
+```
+
+In this example, the `+` operator is overloaded as a friend function of the Matrix class. The function takes constant references to two Matrix objects as parameters, and returns a new Matrix object whose elements are the sums of the corresponding elements of the two matrices.
+
+3. Overloading binary operators using normal functions:
+
+Binary operators can also be overloaded using normal functions, which take two arguments, one for each operand. This approach is suitable when the operator does not need to access private data members of either operand. For example:
+
+```cpp
+class Point {
+public:
+    double x, y;
+};
+Point operator+(const Point& lhs, const Point& rhs) {
+    return Point{lhs.x + rhs.x, lhs.y + rhs.y};
+}
+```
+In this example, the `+` operator is overloaded using a normal function, which takes constant references to two `Point` objects as parameters, and returns a new `Point` object whose coordinates are the sums of the corresponding coordinates of the two points.
+
+Note that in all three cases, the function signature of the overloaded binary operator must match the syntax of the operator being overloaded.
+
