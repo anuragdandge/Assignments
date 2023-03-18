@@ -124,6 +124,7 @@ In C++, a reference is a type of variable that refers to another variable. A ref
 ```cpp
 #include <iostream>
 using namespace std;
+using namespace std;
 
 int main() {
    int num = 10;
@@ -190,6 +191,7 @@ Here is an example of an inline function:
 ```cpp
 #include <iostream>
 using namespace std;
+using namespace std;
 
 inline int multiply(int a, int b) {
    return a * b;
@@ -213,10 +215,6 @@ This eliminates the overhead of a function call, which can be especially benefic
 Note that whether or not a function is actually inlined is up to the compiler, which may choose not to inline a function in certain circumstances, such as when the function is too large or when the function call is part of a loop. In general, it's best to use inline functions sparingly and only for small, frequently called functions where the performance benefits are likely to be significant.
 
 
-
-
-
--------------
 ### Q . Compare cout and cin over `printf()` and `scanf()`
 `cout` and `cin` are C++ I/O stream objects that provide a convenient and type-safe way to perform input and output operations, while `printf()` and `scanf()` are C library functions that provide similar functionality in C.
 
@@ -238,7 +236,7 @@ In general, cout and cin are preferred in C++ due to their type safety, object-o
 
 
 
--------------
+
 ### Q . Explain Dynamic  memory allocation using NEW and DELETE with example and compare with malloc and free function in 'C' 
 In C++, dynamic memory allocation is done using the new and delete operators, which are similar to the `malloc()` and `free()` functions in C. However, there are some differences in their usage and behavior.
 
@@ -254,7 +252,7 @@ int main() {
    *ptr = 42;
 
    // print the value of the dynamically allocated integer
-   std::cout << *ptr << std::endl;
+   cout << *ptr << endl;
 
    // deallocate the dynamically allocated integer
    delete ptr;
@@ -273,7 +271,7 @@ Another difference is that `new/delete` can be overloaded by user-defined types,
 Finally, it's worth noting that in C++ it's generally preferred to use `new/delete` over `malloc()/free()`, since `new/delete` are type-safe and offer better support for object-oriented programming features such as constructors and destructors. However, `malloc()/free()` are still commonly used in C code and in performance-critical applications where fine-grained control over memory allocation and deallocation is necessary.
 
 
--------------
+---
 
 # UNIT 3 
 ### Q . Explain static data member and static member function 
@@ -295,7 +293,7 @@ int MyClass::count = 0; // initialization of static data member
 int main() {
     MyClass::incrementCount(); // call static member function
     MyClass::incrementCount();
-    std::cout << "Count: " << MyClass::count << std::endl; // print static data member
+    cout << "Count: " << MyClass::count << endl; // print static data member
     return 0;
 }
 ```
@@ -310,7 +308,6 @@ Static data members and static member functions are useful in situations where w
 It's worth noting that static data members and static member functions can only access other static members of the class, since they do not have access to the state of any particular instance.
 
 
--------------
 ### Q . What are constructor and destructor explain with example 
 
 
@@ -324,16 +321,16 @@ class MyClass {
     int x;
     MyClass() { // constructor
         x = 0;
-        std::cout << "Constructor called" << std::endl;
+        cout << "Constructor called" << endl;
     }
     ~MyClass() { // destructor
-        std::cout << "Destructor called" << std::endl;
+        cout << "Destructor called" << endl;
     }
 };
 
 int main() {
     MyClass obj; // create an object of MyClass
-    std::cout << "Object created" << std::endl;
+    cout << "Object created" << endl;
     return 0;
 }
 ```
@@ -345,7 +342,6 @@ Constructors and destructors are used to ensure that objects are always initiali
 
 It's worth noting that if a class does not have a constructor or a destructor defined explicitly, C++ provides a default constructor and a default destructor. The default constructor initializes all data members to their default values, while the default destructor does nothing. However, if a class acquires any resources during its lifetime, such as memory or file handles, it's important to define a destructor to ensure that those resources are properly released when the object is destroyed.
 
--------------
 ### Q . Explain Friend Function with example
 In C++, a friend function is a function that is not a member of a class, but has access to the private and protected members of the class. A friend function can be declared inside the class definition using the friend keyword, or outside the class definition with the friend keyword and the class name.
 
@@ -361,7 +357,7 @@ class MyClass {
 };
 
 void printX(MyClass obj) {
-    std::cout << "The value of x is: " << obj.x << std::endl;
+    cout << "The value of x is: " << obj.x << endl;
 }
 
 int main() {
@@ -641,25 +637,26 @@ Here's an example to illustrate the concept of virtual functions:
 
 ```cpp
 #include <iostream>
+using namespace std;
 
 class Shape {
 public:
     virtual void draw() {
-        std::cout << "Drawing a shape\n";
+        cout << "Drawing a shape\n";
     }
 };
 
 class Circle : public Shape {
 public:
     void draw() override {
-        std::cout << "Drawing a circle\n";
+        cout << "Drawing a circle\n";
     }
 };
 
 class Square : public Shape {
 public:
     void draw() override {
-        std::cout << "Drawing a square\n";
+        cout << "Drawing a square\n";
     }
 };
 
@@ -693,6 +690,7 @@ Here's an example to illustrate the concept of friend class:
 
 ```cpp
 #include <iostream>
+using namespace std;
 
 class Shape {
 private:
@@ -716,7 +714,7 @@ public:
 int main() {
     Shape shape(5, 10);
     Rectangle rectangle;
-    std::cout << "Area of the rectangle: " << rectangle.area(shape) << std::endl;
+    cout << "Area of the rectangle: " << rectangle.area(shape) << endl;
     return 0;
 }
 ```
@@ -740,9 +738,175 @@ Note that using friend classes can sometimes break encapsulation, so it should b
 
 ### Q . What are Stream Classes? Explain any two input and output functions with example 
 
+In C++, stream classes are used to handle input and output operations on various sources such as files, strings, and console. Stream classes are divided into two categories: input stream and output stream.
+
+Input streams are used to read data from a source, such as keyboard or file, into the program. The most commonly used input stream class is `istream`, which is used for input operations on a stream.
+
+Output streams are used to write data from the program to a destination, such as console or file. The most commonly used output stream class is `ostream`, which is used for output operations on a stream.
+
+Here are two examples of input and output functions using stream classes:
+
+```cpp
+#include <iostream>
+using namespace std;
+#include <fstream>
+using namespace std;
+
+int main() {
+    // output file stream example
+    ofstream outfile("example.txt");
+    if (outfile.is_open()) {
+        outfile << "Hello, world!" << endl;
+        outfile.close();
+    }
+    else {
+        cout << "Unable to open file" << endl;
+        return 1;
+    }
+
+    // input file stream example
+    ifstream infile("example.txt");
+    if (infile.is_open()) {
+        string line;
+        while (getline(infile, line)) {
+            cout << line << endl;
+        }
+        infile.close();
+    }
+    else {
+        cout << "Unable to open file" << endl;
+        return 1;
+    }
+
+    return 0;
+}
+```
+
+In this example, we use stream classes to write a message to a file and then read it back. We first create an output file stream `outfile` and open the file "example.txt" for writing. We then check if the file is open and write the message "Hello, world!" to it. Finally, we close the file.
+
+Next, we create an input file stream `infile` and open the same file for reading. We then check if the file is open and use the `getline()`  function to read the contents of the file line by line into a string variable `line`. We then print the contents of `line` to the console. Finally, we close the file.
+
+The output of the program is:
+
+```cpp
+Hello, world!
+```
+
+In this example, we used the `ofstream` and `ifstream` classes to write to and read from a file, respectively. The `<<` operator is used to write data to a stream, and the `getline()` function is used to read data from a stream. These are just two examples of input and output functions that can be used with stream classes. Other functions include `put()`, `get()`, `write()`, and `read()`.
 
 
+### Q . What are manipulators? Explain user defined  manipulators with example
 
+In C++, manipulators are functions that are used to manipulate the input/output streams. They are used to format the output in a specific way, such as setting the precision of floating-point numbers or aligning the output. Manipulators are used by inserting them into the output stream using the `<<` operator.
+
+C++ provides several built-in manipulators, such as `endl`, `setw()`, `setprecision()`, and `left`/`right`. These manipulators can be used to format the output in various ways.
+
+User-defined manipulators are custom functions that can be created to format the output in a specific way. These functions are called as manipulator functions, and they can be created using function templates or overloading the `<<` operator. Here is an example of a user-defined manipulator function that converts a floating-point number to a percentage:
+
+```cpp
+#include <iostream>
+using namespace std;
+#include <iomanip>
+using namespace std;
+
+// user-defined manipulator function to convert a float to percentage
+ostream& percent(ostream& os, float value) {
+    os << setprecision(2) << fixed << (value * 100.0f) << "%";
+    return os;
+}
+
+int main() {
+    float num = 0.785;
+    cout << "Percentage: " << percent << num << endl;
+    return 0;
+}
+```
+In this example, we define a function `percent` that takes an output stream `os` and a floating-point number `value` as parameters. The function multiplies the value by 100 and formats it with two decimal places and a fixed-point notation using the `setprecision()` and `fixed` manipulators. The formatted value is then output to the stream using the `<<` operator, and the stream is returned.
+
+In the `main()` function, we define a float variable num with the value `0.785`. We then output the value of `num` as a percentage by inserting the `percent` manipulator function into the output stream using the `<<` operator. The output of the program is:
+
+```cpp
+Percentage: 78.50%
+```
+
+In this example, we created a user-defined manipulator function percent that formats the output in a specific way. User-defined manipulators can be used to format the output in a variety of ways, making it easier to output data in a format that is easier to read and understand.
+
+
+### Q . What are different mode of file operation in c++
+
+
+C++ provides several modes for file operations that allow you to read, write, and modify files. These modes determine how the file will be opened and what operations can be performed on it. The different modes of file operation in C++ are:
+
+ -  Input mode `(ios::in)` : This mode is used to read data from a file. When a file is opened in input mode, the file pointer is positioned at the beginning of the file.
+
+ - Output mode `(ios::out)` : This mode is used to write data to a file. When a file is opened in output mode, the file is truncated (i.e., its contents are deleted) and the file pointer is positioned at the beginning of the file.
+
+ - Append mode `(ios::app)` : This mode is used to append data to the end of a file. When a file is opened in append mode, the file pointer is positioned at the end of the file.
+
+- Binary mode `(ios::binary)` : This mode is used to open a file in binary mode. In binary mode, data is read or written in its raw format, without any formatting or interpretation.
+
+- Truncate mode `(ios::trunc)` : This mode is used to truncate an existing file. When a file is opened in truncate mode, its contents are deleted and the file pointer is positioned at the beginning of the file.
+
+You can combine these modes using the bitwise OR operator (|) to open a file in multiple modes. For example, to open a file in input and binary modes, you would use the mode ios::in | ios::binary.
+
+Here's an example of opening a file in input mode:
+
+```cpp
+#include <fstream>
+using namespace std;
+
+int main() {
+    ifstream infile("example.txt", ios::in);
+    // read data from the file
+    infile.close();
+    return 0;
+}
+```
+In this example, we use the `ifstream` class to open the file `example.txt` in input mode `(ios::in)`. We can then read data from the file using input operations. Finally, we close the file using the `close()` method of the `ifstream` class.
+
+Note that in C++, file streams are always opened in text mode by default, unless the `ios::binary` mode is specified. In text mode, the file is treated as a sequence of characters, with end-of-line characters translated to the appropriate platform-specific representation. In binary mode, the file is treated as a sequence of bytes, with no translation of end-of-line characters.
+
+
+### Q . What is Exception handling ? What are the steps for exception handling in C++ ? give example
+
+Exception handling is a mechanism in C++ that allows you to handle runtime errors or exceptional situations that may occur during program execution. It provides a way to handle errors in a more structured and controlled manner, rather than letting the program crash or terminate unexpectedly.
+
+The basic steps for exception handling in C++ are:
+
+1. Throw an exception: When an exceptional situation occurs during program execution, you can use the `throw` keyword to throw an exception object. The exception object can be of any type, but it should be designed to carry information about the error that occurred.
+
+2. Catch the exception: To handle the thrown exception, you can use a `try`-`catch` block. The `try` block contains the code that may throw an exception, and the `catch` block contains the code that will handle the exception if it is thrown. The `catch` block should specify the type of exception it can handle.
+
+3. Handle the exception: If an exception is thrown in the `try` block, the program will jump to the appropriate `catch` block, based on the type of exception thrown. In the `catch` block, you can handle the exception in whatever way is appropriate, such as displaying an error message, logging the error, or taking some other action to recover from the error.
+
+Here's an example of how exception handling works in C++:
+
+```cpp
+#include <iostream>
+
+void divide(int x, int y) {
+    if (y == 0) {
+        throw "division by zero";
+    }
+    std::cout << "Result: " << x / y << std::endl;
+}
+
+int main() {
+    int a = 10, b = 0;
+    try {
+        divide(a, b);
+    }
+    catch (const char* msg) {
+        std::cerr << "Error: " << msg << std::endl;
+    }
+    return 0;
+}
+```
+In this example, the `divide()` function takes two arguments `x` and `y`, and performs integer division on them. If `y` is zero, the function throws an exception with the message  `"division by zero"`.
+
+In the `main()` function, we call the `divide()` function with arguments a and b, where b is zero. We have a `try`-`catch` block around the function call to handle any exceptions that may be thrown.
+
+Since `b` is zero, the `divide()` function throws an exception with the message `"division by zero"`. This exception is caught by the `catch` block, which displays an error message to the standard error stream.
 
 
 
