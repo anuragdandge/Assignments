@@ -118,6 +118,36 @@ Overall, C and C++ are both powerful and flexible programming languages, but C++
 
 ---
 # UNIT 2 
+
+#### Classes and Objects -Data Types and Variables, Operators, Control-flow Statements, Looping Statements, Arrays, Strings, Structures, Enumerations, Class, Object, class and data abstraction, class scope and accessing class members, separating interface from implementation, controlling access to members 
+
+1. Data Types and Variables: Like other programming languages, C++ has built-in data types such as int, float, double, char, etc. that can be used to store values. Variables are used to store data of these types.
+
+1. Operators: C++ has a variety of operators such as arithmetic operators (+, -, *, /), relational operators (<, >, <=, >=), logical operators (&&, ||, !), and more. These operators can be used to manipulate data.
+
+1. Control-flow Statements: Control-flow statements like if, else, switch, and conditional operators are used to control the flow of a program based on specific conditions.
+
+1. Looping Statements: C++ supports several looping statements such as for, while, and do-while. These are used to execute a block of code repeatedly.
+
+1. Arrays: Arrays are a collection of data items of the same type stored in contiguous memory locations. In C++, arrays can be declared and used to store multiple values.
+
+1. Strings: Strings are a collection of characters. In C++, strings are represented as arrays of characters.
+
+1. Structures: Structures are user-defined data types that allow you to group together variables of different data types under a single name.
+
+1. Enumerations: Enumerations allow you to create a set of named constants that can be used in place of numbers to improve the readability of code.
+
+1. Class: A class is a user-defined data type that allows you to group together variables and functions under a single name.
+
+1. Object: An object is an instance of a class. It represents a specific set of data and functions that are defined in the class.
+
+1. Class and data abstraction: Data abstraction is a programming technique that allows you to separate the interface of a class from its implementation. This improves the readability and maintainability of code.
+
+1. Class scope and accessing class members: Class members can be accessed using the dot (.) operator. Class members can also be accessed using pointers and the arrow (->) operator.
+
+1. Separating interface from implementation: The interface of a class defines the public methods that can be used to interact with the class. The implementation of a class contains the private methods and data members that are used to implement the public methods.
+
+1. Controlling access to members: Access specifiers such as public, private, and protected are used to control access to the members of a class.
 ### Q . Explain the Concept of reference variable along with example 
 In C++, a reference is a type of variable that refers to another variable. A reference variable is essentially an alias for another variable, meaning that any changes made to the reference variable are reflected in the original variable it refers to. Here is an example to illustrate the concept of reference variable:
 
