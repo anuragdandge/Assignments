@@ -378,6 +378,32 @@ Friend functions are often used to allow functions that are not members of a cla
 ---
 
 # UNIT 4 
+
+### Virtual Functions
+
+- #### Need for virtual function:
+Virtual functions are used in object-oriented programming to achieve dynamic binding, which allows the function call to be resolved at runtime rather than compile-time. This means that the function called depends on the type of object being referred to, rather than the type of pointer or reference used to refer to the object. Virtual functions are declared in a base class and are overridden in derived classes to provide specialized implementations. The need for virtual functions arises in scenarios where different derived classes have different implementations of the same function.
+
+- #### Friend Functions:
+Friend functions are functions that are declared as friends of a class and have access to its private and protected members. They can be used to provide functions that are logically part of the class but cannot be implemented as member functions. Friend functions are declared using the keyword "friend" in the class definition.
+
+- #### Static Functions:
+Static functions are member functions of a class that can be called without creating an instance of the class. They are declared using the keyword "static" in the class definition. Static functions can access only static data members of the class and cannot access non-static data members or member functions.
+
+- #### Assignment and Copy Initialization:
+Assignment and copy initialization are two ways of initializing an object in C++. Assignment initializes an object after it has been created, while copy initialization creates a new object and initializes it with the value of an existing object. The syntax for assignment is object1 = object2, while the syntax for copy initialization is object1(object2).
+
+- #### this Pointer:
+The "this" pointer is a special pointer in C++ that holds the address of the current object. It is implicitly available inside all non-static member functions of a class. The "this" pointer can be used to access the members of the current object and to distinguish between multiple objects of the same class.
+
+- #### Virtual Function and Dynamic Binding:
+Virtual functions are used in C++ to achieve dynamic binding, which allows the function call to be resolved at runtime rather than compile-time. This means that the function called depends on the type of object being referred to, rather than the type of pointer or reference used to refer to the object. Virtual functions are declared in a base class and are overridden in derived classes to provide specialized implementations.
+
+- #### Virtual Destructor:
+A virtual destructor is a destructor declared as virtual in a base class. It ensures that the destructor of the derived class is called when an object of the derived class is deleted through a pointer to the base class. This is important when dealing with polymorphic objects, where the type of the object being deleted may not be known at compile-time.
+
+---
+
 ### Q .  What is Operator Overloading List the operator that cannot be overloaded as member function
 
 In C++, operator overloading is a feature that allows operators such as `+, -, *, /, <<, >>,` and many others to be redefined for a user-defined class or data type. This allows for a more natural and intuitive syntax when working with user-defined types.
