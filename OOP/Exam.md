@@ -341,6 +341,36 @@ Pitfalls of Operator Overloading and Conversion:
 - Overloading operators can lead to confusion and make the code difficult to read and maintain.
 - Overloading operators can change the semantics of the operators, which can lead to unexpected results.
 - Conversion operators can be misused, leading to security vulnerabilities in the code. It is important to carefully design and test the conversion operators.
+
+#### Access Specifiers 
+
+In C++, Access Specifiers are keywords that are used to control the access to the class members. There are three types of access specifiers:
+
+ 1. #### Public: 
+    Members declared as public are accessible from anywhere in the program. These members can be accessed by objects of the class and by functions outside the class.
+
+ 2. #### Private: 
+    Members declared as private are only accessible within the class. They cannot be accessed by objects of the class or by functions outside the class.
+
+3. #### Protected: 
+    Members declared as protected are only accessible within the class and its derived classes. They cannot be accessed by objects of the class or by functions outside the class or its derived classes.
+
+Here's an example to illustrate the use of access specifiers:
+
+```cpp
+class MyClass {
+    public:
+        int publicVar; // can be accessed from anywhere
+    private:
+        int privateVar; // can only be accessed within the class
+    protected:
+        int protectedVar; // can only be accessed within the class and its derived classes
+};
+```
+
+In the above example, publicVar can be accessed from anywhere, privateVar can only be accessed within the MyClass class, and protectedVar can be accessed within the MyClass class and its derived classes.
+
+
 ### Q . Explain static data member and static member function 
 In C++, a static data member is a class member that is shared by all instances of the class, rather than being unique to each instance. A static member function is a class member function that can be called without an instance of the class.
 
